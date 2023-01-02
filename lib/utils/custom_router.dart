@@ -1,27 +1,32 @@
-import 'package:enzoboi/screens/home_page.dart';
-import 'package:enzoboi/screens/home_page_mobile.dart';
+import 'package:enzoboi/screens/landing/landing_page.dart';
+import 'package:enzoboi/screens/landing/landing_page_mobile.dart';
 import 'package:enzoboi/widgets/responsive_builder.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   final routeName = settings.name;
+
+  final _defaultRoute = AnimatedPageRouteBuilder(
+    routeName: routeName!,
+    destination: const ResponsiveBuilder(
+      desktop: LandingPage(),
+      mobile: LandingPageMobile(),
+    ),
+  );
+
   switch (routeName) {
-    case HomePage.routeName:
+    case LandingPage.routeName:
+      print('--------- route = $routeName');
       return AnimatedPageRouteBuilder(
-        routeName: HomePage.routeName,
+        routeName: routeName,
         destination: const ResponsiveBuilder(
-          desktop: HomePage(),
-          mobile: HomePageMobile(),
+          desktop: LandingPage(),
+          mobile: LandingPageMobile(),
         ),
       );
     default:
-      return AnimatedPageRouteBuilder(
-        routeName: HomePage.routeName,
-        destination: const ResponsiveBuilder(
-          desktop: HomePage(),
-          mobile: HomePageMobile(),
-        ),
-      );
+      print('--------- route $routeName');
+      return _defaultRoute;
   }
 }
 
