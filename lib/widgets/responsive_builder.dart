@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import '../utils/constrains.dart';
 
 class ResponsiveBuilder extends StatelessWidget {
-  final Widget mobile;
   final Widget desktop;
+  final Widget mobile;
 
   const ResponsiveBuilder({
     super.key,
-    required this.mobile,
     required this.desktop,
+    required this.mobile,
   });
 
   @override
