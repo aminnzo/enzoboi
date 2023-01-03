@@ -1,4 +1,5 @@
 import 'package:enzoboi/services/url_strategy/url_strategy.dart';
+import 'package:enzoboi/theme/app_theme.dart';
 import 'package:enzoboi/utils/custom_router.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,10 @@ class Portfolio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'AE-M Portfolio',
-      // theme: themeData,
+      theme: appThemeData,
       initialRoute: "/",
       onGenerateRoute: generateRoute,
     );
