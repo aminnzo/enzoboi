@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 Route<dynamic> generateRoute(RouteSettings settings) {
   final routeName = settings.name;
 
-  final _defaultRoute = AnimatedPageRouteBuilder(
+  final defaultRoute = AnimatedPageRouteBuilder(
     routeName: routeName!,
     destination: const ResponsiveBuilder(
       desktop: LandingPage(),
@@ -25,8 +25,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         ),
       );
     default:
-      print('--------- route $routeName');
-      return _defaultRoute;
+      print('--------- default route $routeName');
+      return defaultRoute;
   }
 }
 
