@@ -3,9 +3,9 @@
     "short_name": "enzoboi",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "My web portfolio",
+    "background_color": "#000B11",
+    "theme_color": "#000B11",
+    "description": "AE-M Portfolio",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
