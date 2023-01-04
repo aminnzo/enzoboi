@@ -1,5 +1,6 @@
 import 'package:enzoboi/theme/app_text_style.dart';
 import 'package:enzoboi/theme/app_theme.dart';
+import 'package:enzoboi/utils/animations.dart';
 import 'package:enzoboi/widgets/max_width_container.dart';
 import 'package:enzoboi/widgets/social_links.dart';
 import 'package:flutter/material.dart';
@@ -17,24 +18,6 @@ class _LandingPageState extends State<LandingPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<Offset> _linkColumnAnimation;
-
-  final animationDuration = const Duration(milliseconds: 1400);
-
-  Animation<Offset> getTweenAnimation(
-      {double beginX = 0.0,
-      double beginY = 0.0,
-      double endX = 0.0,
-      double endY = 0.0,
-      double begin = 0,
-      double end = 1,
-      Curve cubic = Curves.easeOutQuint,
-      required AnimationController controller}) {
-    return Tween<Offset>(
-      begin: Offset(beginX, beginY),
-      end: Offset(endX, endY),
-    ).animate(CurvedAnimation(
-        parent: controller, curve: Interval(begin, end, curve: cubic)));
-  }
 
   @override
   void initState() {
@@ -64,17 +47,25 @@ class _LandingPageState extends State<LandingPage>
                   child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text("Enzo M.", style: AppTextStyle.head(context)),
+                  Text("Enzo M.", style: AppTextStyle.displayLarge(context)),
                   RichText(
                     text: TextSpan(children: <TextSpan>[
                       TextSpan(
-                          text: 'Flutter/Dart',
-                          style: AppTextStyle.large(context).copyWith(color: kAccentColor)),
+                          text: 'Flutter',
+                          style: AppTextStyle.headlineLarge(context)
+                              .copyWith(color: kAccentColor)),
+                      TextSpan(
+                          text: "-",
+                          style: AppTextStyle.headlineLarge(context)),
+                      TextSpan(
+                          text: 'Dart',
+                          style: AppTextStyle.headlineLarge(context)
+                              .copyWith(color: kAccentColor)),
                       TextSpan(
                           text: ' ' 'developer',
-                          style: AppTextStyle.large(context)),
+                          style: AppTextStyle.headlineLarge(context)),
                     ]),
-                  )
+                  ),
                 ],
               )),
               // Positioned(top: 30, right: 30, child: NavigationBar()),

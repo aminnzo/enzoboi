@@ -1,3 +1,6 @@
+import 'package:enzoboi/theme/app_text_style.dart';
+import 'package:enzoboi/theme/app_theme.dart';
+import 'package:enzoboi/widgets/social_links.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageMobile extends StatelessWidget {
@@ -6,17 +9,33 @@ class LandingPageMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          color: Colors.indigo.shade900,
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(80.0),
+          child: Container(color: kAccentColor),
+          // child: MobileAppBar(),
         ),
-        child: const Center(
-          child: Text(
-            'Hi, I\'m Enzo M.',
-            style: TextStyle(fontSize: 60),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Text("Enzo M.", style: AppTextStyle.displayMedium(context)),
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(children: <TextSpan>[
+                    TextSpan(
+                        text: 'Flutter-Dart',
+                        style: AppTextStyle.headlineMedium(context)
+                            .copyWith(color: kAccentColor)),
+                    TextSpan(
+                        text: ' ' 'developer',
+                        style: AppTextStyle.headlineSmall(context)),
+                  ]),
+                ),
+              ]),
+              const SocialLinks()
+            ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
