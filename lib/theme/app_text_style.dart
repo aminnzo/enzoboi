@@ -1,7 +1,8 @@
+import 'package:enzoboi/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class AppTextStyle {
-  static const String _font = 'Inter';
+  static const String _defaultFont = kFontName;
   static const Color _defaultColor = Colors.white;
 
   /// # Largest of the display styles.
@@ -15,7 +16,7 @@ class AppTextStyle {
   static TextStyle displayLarge(BuildContext context) =>
       Theme.of(context).textTheme.displayLarge!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Middle size of the display styles.
@@ -29,7 +30,7 @@ class AppTextStyle {
   static TextStyle displayMedium(BuildContext context) =>
       Theme.of(context).textTheme.displayMedium!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Smallest of the display styles.
@@ -43,7 +44,7 @@ class AppTextStyle {
   static TextStyle displaySmall(BuildContext context) =>
       Theme.of(context).textTheme.displaySmall!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Largest of the headline styles
@@ -57,7 +58,7 @@ class AppTextStyle {
   static TextStyle headlineLarge(BuildContext context) =>
       Theme.of(context).textTheme.headlineLarge!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Middle size of the headline styles.
@@ -71,7 +72,7 @@ class AppTextStyle {
   static TextStyle headlineMedium(BuildContext context) =>
       Theme.of(context).textTheme.headlineMedium!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Smallest of the headline styles.
@@ -85,7 +86,7 @@ class AppTextStyle {
   static TextStyle headlineSmall(BuildContext context) =>
       Theme.of(context).textTheme.headlineSmall!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Largest of the title styles.
@@ -99,7 +100,7 @@ class AppTextStyle {
   static TextStyle titleLarge(BuildContext context) =>
       Theme.of(context).textTheme.titleLarge!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Middle size of the title styles.
@@ -113,7 +114,7 @@ class AppTextStyle {
   static TextStyle titleMedium(BuildContext context) =>
       Theme.of(context).textTheme.titleMedium!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Smallest of the title styles.
@@ -126,7 +127,7 @@ class AppTextStyle {
   static TextStyle titleSmall(BuildContext context) =>
       Theme.of(context).textTheme.titleSmall!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Largest of the label styles.
@@ -141,7 +142,7 @@ class AppTextStyle {
   static TextStyle labelLarge(BuildContext context) =>
       Theme.of(context).textTheme.labelLarge!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Middle size of the label styles.
@@ -156,7 +157,7 @@ class AppTextStyle {
   static TextStyle labelMedium(BuildContext context) =>
       Theme.of(context).textTheme.labelMedium!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Smallest of the label styles.
@@ -171,7 +172,7 @@ class AppTextStyle {
   static TextStyle labelSmall(BuildContext context) =>
       Theme.of(context).textTheme.labelSmall!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Largest of the body styles.
@@ -184,7 +185,7 @@ class AppTextStyle {
   static TextStyle bodyLarge(BuildContext context) =>
       Theme.of(context).textTheme.bodyLarge!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Middle size of the body styles.
@@ -198,7 +199,7 @@ class AppTextStyle {
   static TextStyle bodyMedium(BuildContext context) =>
       Theme.of(context).textTheme.bodyMedium!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 
   /// # Smallest of the body styles.
@@ -211,6 +212,6 @@ class AppTextStyle {
   static TextStyle bodySmall(BuildContext context) =>
       Theme.of(context).textTheme.bodySmall!.copyWith(
             color: _defaultColor,
-            fontFamily: _font,
+            fontFamily: _defaultFont,
           );
 }

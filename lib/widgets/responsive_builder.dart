@@ -1,6 +1,5 @@
+import 'package:enzoboi/utils/constants.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/constrains.dart';
 
 class ResponsiveBuilder extends StatelessWidget {
   final Widget desktop;

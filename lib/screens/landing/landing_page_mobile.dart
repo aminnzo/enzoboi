@@ -1,5 +1,5 @@
 import 'package:enzoboi/theme/app_text_style.dart';
-import 'package:enzoboi/theme/app_theme.dart';
+import 'package:enzoboi/utils/constants.dart';
 import 'package:enzoboi/widgets/social_links.dart';
 import 'package:enzoboi/widgets/top_navigation_menu.dart';
 import 'package:flutter/material.dart';

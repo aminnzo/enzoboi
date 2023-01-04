@@ -1,10 +1,5 @@
+import 'package:enzoboi/utils/constants.dart';
 import 'package:flutter/material.dart';
-
-
-const Color kBackgroundColor = Color(0xff000b11);
-const Color kPrimaryColor = Color(0xffedeeff);
-const Color kAccentColor = Color(0xff0a76f1);
-const Color kLightColor = Color(0x1ACDF2FF);
 
 final ThemeData appThemeData = ThemeData(
   brightness: Brightness.dark,
@@ -12,7 +7,7 @@ final ThemeData appThemeData = ThemeData(
   scaffoldBackgroundColor: kBackgroundColor,
   primaryColor: kPrimaryColor,
   appBarTheme: const AppBarTheme(backgroundColor: kBackgroundColor),
-  fontFamily: 'Inter',
+  fontFamily: kFontName,
   colorScheme: ColorScheme.fromSwatch(
     backgroundColor: kBackgroundColor,
     brightness: Brightness.dark,
