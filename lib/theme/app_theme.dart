@@ -12,7 +12,7 @@ final ThemeData appThemeData = ThemeData(
   scaffoldBackgroundColor: kBackgroundColor,
   primaryColor: kPrimaryColor,
   appBarTheme: const AppBarTheme(backgroundColor: kBackgroundColor),
-  fontFamily: '',
+  fontFamily: 'Inter',
   colorScheme: ColorScheme.fromSwatch(
     backgroundColor: kBackgroundColor,
     brightness: Brightness.dark,

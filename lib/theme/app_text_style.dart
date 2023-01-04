@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppTextStyle {
-  static const String _font = '';
+  static const String _font = 'Inter';
   static const Color _defaultColor = Colors.white;
 
   /// # Largest of the display styles.
