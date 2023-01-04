@@ -3,6 +3,7 @@ import 'package:enzoboi/theme/app_theme.dart';
 import 'package:enzoboi/utils/animations.dart';
 import 'package:enzoboi/widgets/max_width_container.dart';
 import 'package:enzoboi/widgets/social_links.dart';
+import 'package:enzoboi/widgets/top_navigation_menu.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {
@@ -44,31 +45,35 @@ class _LandingPageState extends State<LandingPage>
           child: Stack(
             children: [
               Center(
-                  child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text("Enzo M.", style: AppTextStyle.displayLarge(context)),
-                  RichText(
-                    text: TextSpan(children: <TextSpan>[
-                      TextSpan(
-                          text: 'Flutter',
-                          style: AppTextStyle.headlineLarge(context)
-                              .copyWith(color: kAccentColor)),
-                      TextSpan(
-                          text: "-",
-                          style: AppTextStyle.headlineLarge(context)),
-                      TextSpan(
-                          text: 'Dart',
-                          style: AppTextStyle.headlineLarge(context)
-                              .copyWith(color: kAccentColor)),
-                      TextSpan(
-                          text: ' ' 'developer',
-                          style: AppTextStyle.headlineLarge(context)),
-                    ]),
-                  ),
-                ],
-              )),
-              // Positioned(top: 30, right: 30, child: NavigationBar()),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text("Enzo M.",
+                        style: AppTextStyle.displayLarge(context).copyWith(
+                          fontWeight: FontWeight.w900,
+                        )),
+                    RichText(
+                      text: TextSpan(children: <TextSpan>[
+                        TextSpan(
+                            text: 'Flutter',
+                            style: AppTextStyle.headlineLarge(context)
+                                .copyWith(color: kAccentColor)),
+                        TextSpan(
+                            text: "-",
+                            style: AppTextStyle.headlineLarge(context)),
+                        TextSpan(
+                            text: 'Dart',
+                            style: AppTextStyle.headlineLarge(context)
+                                .copyWith(color: kAccentColor)),
+                        TextSpan(
+                            text: ' ' 'developer',
+                            style: AppTextStyle.headlineLarge(context)),
+                      ]),
+                    ),
+                  ],
+                ),
+              ),
+              const Positioned(top: 30, right: 30, child: TopNavigationMenu()),
               SlideTransition(
                   position: _linkColumnAnimation, child: const SocialLinks())
             ],
