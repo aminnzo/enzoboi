@@ -33,7 +33,7 @@ class LandingPageMobile extends StatelessWidget {
                   ]),
                 ),
               ]),
-              const SocialLinks()
+              const SocialLinks(isMobileView: true),
             ],
           ),
         ));
