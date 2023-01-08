@@ -1,5 +1,9 @@
 import 'package:enzoboi/screens/landing/landing_page.dart';
 import 'package:enzoboi/screens/landing/landing_page_mobile.dart';
+import 'package:enzoboi/screens/personal/personal_page.dart';
+import 'package:enzoboi/screens/personal/personal_page_mobile.dart';
+import 'package:enzoboi/screens/work/work_page.dart';
+import 'package:enzoboi/screens/work/work_page_mobile.dart';
 import 'package:enzoboi/widgets/responsive_builder.dart';
 import 'package:flutter/material.dart';
 
@@ -16,16 +20,24 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
   switch (routeName) {
     case LandingPage.routeName:
-      print('--------- route = $routeName');
+      return defaultRoute;
+    case WorkPage.routeName:
       return AnimatedPageRouteBuilder(
         routeName: routeName,
         destination: const ResponsiveBuilder(
-          desktop: LandingPage(),
-          mobile: LandingPageMobile(),
+          desktop: WorkPage(),
+          mobile: WorkPageMobile(),
+        ),
+      );
+    case PersonalPage.routeName:
+      return AnimatedPageRouteBuilder(
+        routeName: routeName,
+        destination: const ResponsiveBuilder(
+          desktop: PersonalPage(),
+          mobile: PersonalPageMobile(),
         ),
       );
     default:
-      print('--------- default route $routeName');
       return defaultRoute;
   }
 }
@@ -38,7 +50,7 @@ class AnimatedPageRouteBuilder extends PageRouteBuilder {
       : super(
           settings: RouteSettings(name: routeName),
           pageBuilder: (context, animation, another) => destination,
-          transitionDuration: const Duration(milliseconds: 1000),
+          transitionDuration: const Duration(milliseconds: 630),
           transitionsBuilder: (context, animation, another, child) {
             animation = CurvedAnimation(
               parent: animation,

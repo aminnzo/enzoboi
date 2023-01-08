@@ -73,7 +73,14 @@ class _LandingPageState extends State<LandingPage>
                   ],
                 ),
               ),
-              const Positioned(top: 30, right: 30, child: TopNavigationMenu()),
+              const Positioned(
+                  top: 30,
+                  right: 30,
+                  child: TopNavigationMenu(
+                    showHomePage: false,
+                    showPersonalPage: true,
+                    showWorkPage: true,
+                  )),
               SlideTransition(
                   position: _linkColumnAnimation, child: const SocialLinks())
             ],

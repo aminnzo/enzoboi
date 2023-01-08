@@ -14,7 +14,12 @@ class LandingPageMobile extends StatelessWidget {
           preferredSize: Size.fromHeight(80.0),
           child: Padding(
             padding: EdgeInsets.only(right: 30),
-            child: Center(child: TopNavigationMenu()),
+            child: Center(
+                child: TopNavigationMenu(
+              showHomePage: false,
+              showPersonalPage: true,
+              showWorkPage: true,
+            )),
           ),
           // child: MobileAppBar(),
         ),
