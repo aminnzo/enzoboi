@@ -16,13 +16,9 @@ class _PersonalPageMobileState extends State<PersonalPageMobile> {
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(80.0),
           child: Padding(
-            padding: EdgeInsets.only(right: 30),
+            padding: EdgeInsets.symmetric(horizontal: 30),
             child: Center(
-              child: TopNavigationMenu(
-                showHomePage: true,
-                showPersonalPage: false,
-                showWorkPage: true,
-              ),
+              child: TopNavigationMenu(selectedPage: NavPages.personal),
             ),
           ),
           // child: MobileAppBar(),

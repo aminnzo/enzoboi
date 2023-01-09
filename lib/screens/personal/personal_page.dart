@@ -30,12 +30,9 @@ class _PersonalPageState extends State<PersonalPage> {
           ),
           const Positioned(
               top: 30,
-              right: 30,
-              child: TopNavigationMenu(
-                showHomePage: true,
-                showPersonalPage: false,
-                showWorkPage: true,
-              )),
+              left: 30,
+              right: 25,
+              child: TopNavigationMenu(selectedPage: NavPages.personal)),
         ],
       ),
     ),

@@ -13,13 +13,9 @@ class LandingPageMobile extends StatelessWidget {
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(80.0),
           child: Padding(
-            padding: EdgeInsets.only(right: 30),
+            padding: EdgeInsets.symmetric(horizontal: 30),
             child: Center(
-                child: TopNavigationMenu(
-              showHomePage: false,
-              showPersonalPage: true,
-              showWorkPage: true,
-            )),
+                child: TopNavigationMenu(selectedPage: NavPages.landing)),
           ),
           // child: MobileAppBar(),
         ),
@@ -28,7 +24,7 @@ class LandingPageMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Text("Enzo M.",
+                Text("Landing",
                     style: AppTextStyle.displayMedium(context).copyWith(
                       fontWeight: FontWeight.w900,
                     )),

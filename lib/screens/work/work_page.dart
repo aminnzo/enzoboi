@@ -31,12 +31,9 @@ class _WorkPageState extends State<WorkPage> {
               ),
               const Positioned(
                   top: 30,
-                  right: 30,
-                  child: TopNavigationMenu(
-                    showHomePage: true,
-                    showPersonalPage: true,
-                    showWorkPage: false,
-                  )),
+                  left: 30,
+                  right: 25,
+                  child: TopNavigationMenu(selectedPage: NavPages.work)),
             ],
           ),
         ),

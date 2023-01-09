@@ -10,13 +10,9 @@ class WorkPageMobile extends StatelessWidget {
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(80.0),
           child: Padding(
-            padding: EdgeInsets.only(right: 30),
+            padding: EdgeInsets.symmetric(horizontal: 30),
             child: Center(
-              child: TopNavigationMenu(
-                showHomePage: true,
-                showPersonalPage: true,
-                showWorkPage: false,
-              ),
+              child: TopNavigationMenu(selectedPage: NavPages.work),
             ),
           ),
           // child: MobileAppBar(),

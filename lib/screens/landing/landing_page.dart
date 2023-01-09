@@ -48,7 +48,7 @@ class _LandingPageState extends State<LandingPage>
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text("Enzo M.",
+                    Text("Landing",
                         style: AppTextStyle.displayLarge(context).copyWith(
                           fontWeight: FontWeight.w900,
                         )),
@@ -75,12 +75,9 @@ class _LandingPageState extends State<LandingPage>
               ),
               const Positioned(
                   top: 30,
-                  right: 30,
-                  child: TopNavigationMenu(
-                    showHomePage: false,
-                    showPersonalPage: true,
-                    showWorkPage: true,
-                  )),
+                  left: 30,
+                  right: 25,
+                  child: TopNavigationMenu(selectedPage: NavPages.landing)),
               SlideTransition(
                   position: _linkColumnAnimation, child: const SocialLinks())
             ],
