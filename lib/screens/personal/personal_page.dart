@@ -29,9 +29,9 @@ class _PersonalPageState extends State<PersonalPage> {
             ),
           ),
           const Positioned(
-              top: 30,
-              left: 30,
-              right: 25,
+              top: 0,
+              left: 0,
+              right: 0,
               child: TopNavigationMenu(selectedPage: NavPages.personal)),
         ],
       ),

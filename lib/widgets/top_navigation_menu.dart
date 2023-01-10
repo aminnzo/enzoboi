@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:enzoboi/theme/app_text_style.dart';
 import 'package:enzoboi/utils/constants.dart';
 import 'package:flutter/material.dart';
@@ -17,17 +19,28 @@ class TopNavigationMenu extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) => Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          _enzoText(context),
-          Row(children: [
-            _navItem(context, "personal", "/personal",
-                selectedPage == NavPages.personal),
-            _navItem(context, "work", "/work", selectedPage == NavPages.work),
-          ])
-        ],
+  Widget build(BuildContext context) => ClipRect(
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 18),
+            decoration:
+                BoxDecoration(color: kBackgroundColor.withOpacity(0.5)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                _enzoText(context),
+                Row(children: [
+                  _navItem(context, "personal", "/personal",
+                      selectedPage == NavPages.personal),
+                  _navItem(
+                      context, "work", "/work", selectedPage == NavPages.work),
+                ])
+              ],
+            ),
+          ),
+        ),
       );
 
   Widget _enzoText(BuildContext context) => GestureDetector(

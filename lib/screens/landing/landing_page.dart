@@ -74,9 +74,9 @@ class _LandingPageState extends State<LandingPage>
                 ),
               ),
               const Positioned(
-                  top: 30,
-                  left: 30,
-                  right: 25,
+                  top: 0,
+                  left: 0,
+                  right: 0,
                   child: TopNavigationMenu(selectedPage: NavPages.landing)),
               SlideTransition(
                   position: _linkColumnAnimation, child: const SocialLinks())
