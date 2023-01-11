@@ -4,7 +4,6 @@ import 'package:enzoboi/widgets/top_navigation_menu.dart';
 import 'package:flutter/material.dart';
 
 class PersonalPage extends StatefulWidget {
-  static const String routeName = "/personal";
   const PersonalPage({Key? key}) : super(key: key);
 
   @override
@@ -14,27 +13,27 @@ class PersonalPage extends StatefulWidget {
 class _PersonalPageState extends State<PersonalPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
-    body: MaxWidthContainer(
-      child: Stack(
-        children: [
-          Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text("Personal",
-                    style: AppTextStyle.displayLarge(context).copyWith(
-                      fontWeight: FontWeight.w900,
-                    )),
-              ],
-            ),
+        body: MaxWidthContainer(
+          child: Stack(
+            children: [
+              Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text("Personal",
+                        style: AppTextStyle.displayLarge(context).copyWith(
+                          fontWeight: FontWeight.w900,
+                        )),
+                  ],
+                ),
+              ),
+              const Positioned(
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  child: TopNavigationMenu(selectedPage: NavPages.personal)),
+            ],
           ),
-          const Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
-              child: TopNavigationMenu(selectedPage: NavPages.personal)),
-        ],
-      ),
-    ),
-  );
+        ),
+      );
 }

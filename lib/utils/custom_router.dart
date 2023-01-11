@@ -8,6 +8,7 @@ import 'package:enzoboi/screens/personal/personal_page.dart';
 import 'package:enzoboi/screens/personal/personal_page_mobile.dart';
 import 'package:enzoboi/screens/work/work_page.dart';
 import 'package:enzoboi/screens/work/work_page_mobile.dart';
+import 'package:enzoboi/utils/routes.dart';
 import 'package:enzoboi/widgets/responsive_builder.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +24,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   );
 
   switch (routeName) {
-    case LandingPage.routeName:
+    case Routes.landing:
       return AnimatedPageRouteBuilder(
         routeName: routeName,
         destination: const ResponsiveBuilder(
@@ -31,7 +32,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
           mobile: LandingPageMobile(),
         ),
       );
-    case FirstPage.routeName:
+    case Routes.firstPage:
       return AnimatedPageRouteBuilder(
         routeName: routeName,
         destination: const ResponsiveBuilder(
@@ -39,7 +40,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
           mobile: FirstPageMobile(),
         ),
       );
-    case WorkPage.routeName:
+    case Routes.works:
       return AnimatedPageRouteBuilder(
         routeName: routeName,
         destination: const ResponsiveBuilder(
@@ -47,7 +48,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
           mobile: WorkPageMobile(),
         ),
       );
-    case PersonalPage.routeName:
+    case Routes.personal:
       return AnimatedPageRouteBuilder(
         routeName: routeName,
         destination: const ResponsiveBuilder(

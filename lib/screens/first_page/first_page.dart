@@ -3,7 +3,6 @@ import 'package:enzoboi/widgets/hello.dart';
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatelessWidget {
-  static const String routeName = "/";
   const FirstPage({Key? key}) : super(key: key);
 
   @override

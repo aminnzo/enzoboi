@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:enzoboi/theme/app_text_style.dart';
 import 'package:enzoboi/utils/constants.dart';
+import 'package:enzoboi/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 enum NavPages {
@@ -32,10 +33,10 @@ class TopNavigationMenu extends StatelessWidget {
               children: [
                 _enzoText(context),
                 Row(children: [
-                  _navItem(context, "personal", "/personal",
+                  _navItem(context, "personal", Routes.personal,
                       selectedPage == NavPages.personal),
                   _navItem(
-                      context, "work", "/work", selectedPage == NavPages.work),
+                      context, "work", Routes.works, selectedPage == NavPages.work),
                 ])
               ],
             ),
@@ -44,7 +45,7 @@ class TopNavigationMenu extends StatelessWidget {
       );
 
   Widget _enzoText(BuildContext context) => GestureDetector(
-        onTap: () => Navigator.pushReplacementNamed(context, "/"),
+        onTap: () => Navigator.pushReplacementNamed(context, Routes.landing),
         child: Text("Enzo M.",
             style: AppTextStyle.titleLarge(context).copyWith(
               fontWeight: FontWeight.w900,

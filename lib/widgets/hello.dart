@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:enzoboi/theme/app_text_style.dart';
 import 'package:enzoboi/utils/constants.dart';
+import 'package:enzoboi/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 class HelloSlide extends StatefulWidget {
@@ -36,7 +37,7 @@ class _HelloSlideState extends State<HelloSlide> {
     Timer.periodic(changeDuration, (timer) {
       if (counter == 9) {
         timer.cancel();
-        Navigator.pushReplacementNamed(context, "/landing");
+        Navigator.pushReplacementNamed(context, Routes.landing);
       }
       setState(() => currentText = helloTexts[counter]);
       counter++;
