@@ -15,3 +15,16 @@ const Color kEmailColor = Color(0x4DBEBEBE);
 
 const String kFontName = "Inter";
 
+const helloTexts = [
+  "Hello",
+  "नमस्ते",
+  "سلام",
+  "+)+%%",
+  "Hallo",
+  "Բարեւ",
+  "\$#%^!",
+  'Hei',
+  "नमस्कार",
+  "*%yf#",
+];
+

@@ -7,7 +7,7 @@ import 'package:enzoboi/widgets/top_navigation_menu.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatefulWidget {
-  static const String routeName = "/";
+  static const String routeName = "/landing";
 
   const LandingPage({Key? key}) : super(key: key);
 
