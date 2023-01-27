@@ -13,8 +13,6 @@ const Color kTwitterColor = Color(0x4D3584A1);
 const Color kDribbbleColor = Color(0x4DB75EAF);
 const Color kEmailColor = Color(0x4DBEBEBE);
 
-const String kFontName = "Inter";
-
 const helloTexts = [
   "Hello",
   "नमस्ते",
