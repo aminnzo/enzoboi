@@ -13,10 +13,12 @@ enum NavPages {
 
 class TopNavigationMenu extends StatelessWidget {
   final NavPages selectedPage;
+  final bool isMobileView;
 
   const TopNavigationMenu({
     super.key,
     required this.selectedPage,
+    this.isMobileView = false,
   });
 
   @override
@@ -24,20 +26,15 @@ class TopNavigationMenu extends StatelessWidget {
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 18),
-            decoration:
-                BoxDecoration(color: kBackgroundColor.withOpacity(0.5)),
+            padding: EdgeInsets.symmetric(
+                horizontal: isMobileView ? 30 : 30, vertical: 18),
+            decoration: BoxDecoration(color: kBackgroundColor.withOpacity(0.5)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               mainAxisSize: MainAxisSize.max,
               children: [
                 _enzoText(context),
-                Row(children: [
-                  _navItem(context, "personal", Routes.personal,
-                      selectedPage == NavPages.personal),
-                  _navItem(
-                      context, "work", Routes.works, selectedPage == NavPages.work),
-                ])
+                _moreItems(context),
               ],
             ),
           ),
@@ -51,6 +48,18 @@ class TopNavigationMenu extends StatelessWidget {
               fontWeight: FontWeight.w900,
             )),
       );
+
+  Widget _moreItems(BuildContext context) => isMobileView
+      ? IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.menu),
+        )
+      : Row(children: [
+          _navItem(context, "personal", Routes.personal,
+              selectedPage == NavPages.personal),
+          _navItem(
+              context, "work", Routes.works, selectedPage == NavPages.work),
+        ]);
 
   Widget _navItem(
       BuildContext context, String name, String route, bool isSelected) {

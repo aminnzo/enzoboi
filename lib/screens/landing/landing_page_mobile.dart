@@ -12,10 +12,9 @@ class LandingPageMobile extends StatelessWidget {
     return Scaffold(
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(80.0),
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 30),
-            child: Center(
-                child: TopNavigationMenu(selectedPage: NavPages.landing)),
+          child: TopNavigationMenu(
+            selectedPage: NavPages.landing,
+            isMobileView: true,
           ),
           // child: MobileAppBar(),
         ),
