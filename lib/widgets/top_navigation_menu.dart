@@ -46,7 +46,7 @@ class TopNavigationMenu extends StatelessWidget {
 
   Widget _enzoText(BuildContext context) => GestureDetector(
         onTap: () => Navigator.pushReplacementNamed(context, Routes.landing),
-        child: Text("Enzo M.",
+        child: Text("Amin Mohseni.",
             style: AppTextStyle.titleLarge(context).copyWith(
               fontWeight: FontWeight.w900,
             )),
