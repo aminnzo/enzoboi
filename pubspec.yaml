@@ -12,10 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
-  url_launcher: ^6.1.7
+  url_launcher: ^6.1.8
   font_awesome_flutter: ^10.3.0
-  google_fonts: ^4.0.0
+  google_fonts: ^4.0.1
 
 dev_dependencies:
   flutter_test:
