@@ -19,7 +19,7 @@ class Portfolio extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'AE-M Portfolio',
       theme: appThemeData,
-      initialRoute: Routes.firstPage,
+      initialRoute: Routes.landing,
       onGenerateRoute: generateRoute,
     );
   }

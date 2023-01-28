@@ -1,5 +1,3 @@
-import 'package:enzoboi/screens/first_page/first_page.dart';
-import 'package:enzoboi/screens/first_page/first_page_mobile.dart';
 import 'package:enzoboi/screens/landing/landing_page.dart';
 import 'package:enzoboi/screens/landing/landing_page_mobile.dart';
 import 'package:enzoboi/screens/not_found/not_found_page.dart';
@@ -30,14 +28,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
         destination: const ResponsiveBuilder(
           desktop: LandingPage(),
           mobile: LandingPageMobile(),
-        ),
-      );
-    case Routes.firstPage:
-      return AnimatedPageRouteBuilder(
-        routeName: routeName,
-        destination: const ResponsiveBuilder(
-          desktop: FirstPage(),
-          mobile: FirstPageMobile(),
         ),
       );
     case Routes.works:

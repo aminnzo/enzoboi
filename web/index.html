@@ -18,7 +18,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="My web portfolio">
+  <meta name="description" content="Enzo's web portfolio">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,7 +29,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>enzoboi</title>
+  <title>Enzo's Portfolio</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
@@ -38,8 +38,12 @@
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+  <div id="changeText" class="hello"></div>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
@@ -53,6 +57,21 @@
         return appRunner.runApp();
       });
     });
+
+    // Customize loader - this is showing hello text in different languages
+    var text = ["Hello", "नमस्ते", "سلام", "+)+%%", "Hallo", "Բարեւ", "$#%^!", "Hei", "*%yf#"];
+    var counter = 0;
+    var elem = document.getElementById("changeText");
+    var inst = setInterval(change, 100);
+
+    function change() {
+      elem.innerHTML = text[counter];
+      counter++;
+      if (counter >= text.length) {
+        counter = 0;
+        // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+      }
+    }
   </script>
 </body>
 </html>

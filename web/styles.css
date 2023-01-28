@@ -1,0 +1,13 @@
+html,
+body {
+  background-color: #000B11
+}
+
+.hello {
+  color: #FFFFFF;
+  font-size: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
