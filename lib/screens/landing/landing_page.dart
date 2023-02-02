@@ -46,8 +46,8 @@ class _LandingPageState extends State<LandingPage>
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text("Landing",
-                        style: AppTextStyle.displayLarge(context).copyWith(
+                    Text("Under Development",
+                        style: AppTextStyle.displayMedium(context).copyWith(
                           fontWeight: FontWeight.w900,
                         )),
                     RichText(

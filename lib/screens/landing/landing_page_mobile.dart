@@ -19,29 +19,34 @@ class LandingPageMobile extends StatelessWidget {
           // child: MobileAppBar(),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Text("Landing",
-                    style: AppTextStyle.displayMedium(context).copyWith(
-                      fontWeight: FontWeight.w900,
-                    )),
-                RichText(
-                  textAlign: TextAlign.center,
-                  text: TextSpan(children: <TextSpan>[
-                    TextSpan(
-                        text: 'Flutter-Dart',
-                        style: AppTextStyle.headlineMedium(context)
-                            .copyWith(color: kAccentColor)),
-                    TextSpan(
-                        text: ' ' 'developer',
-                        style: AppTextStyle.headlineSmall(context)),
-                  ]),
-                ),
-              ]),
-              const SocialLinks(isMobileView: true),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Text("Under Development",
+                      textAlign: TextAlign.center,
+                      style: AppTextStyle.headlineLarge(context).copyWith(
+                        fontWeight: FontWeight.w900,
+                      )),
+                  const SizedBox(height: 14),
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(children: <TextSpan>[
+                      TextSpan(
+                          text: 'Flutter-Dart',
+                          style: AppTextStyle.headlineSmall(context)
+                              .copyWith(color: kAccentColor)),
+                      TextSpan(
+                          text: ' ' 'developer',
+                          style: AppTextStyle.headlineSmall(context)),
+                    ]),
+                  ),
+                ]),
+                const SocialLinks(isMobileView: true),
+              ],
+            ),
           ),
         ));
   }
