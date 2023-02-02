@@ -42,7 +42,11 @@ class TopNavigationMenu extends StatelessWidget {
       );
 
   Widget _enzoText(BuildContext context) => GestureDetector(
-        onTap: () => Navigator.pushReplacementNamed(context, Routes.landing),
+        onTap: () {
+          // prevent from navigating to current route
+          if (selectedPage == NavPages.landing) return;
+          Navigator.pushReplacementNamed(context, Routes.landing);
+        },
         child: Text("Amin Mohseni.",
             style: AppTextStyle.titleLarge(context).copyWith(
               fontWeight: FontWeight.w900,
@@ -58,14 +62,19 @@ class TopNavigationMenu extends StatelessWidget {
           _navItem(context, "personal", Routes.personal,
               selectedPage == NavPages.personal),
           _navItem(
-              context, "work", Routes.works, selectedPage == NavPages.work),
+              context, "works", Routes.works, selectedPage == NavPages.work),
         ]);
 
   Widget _navItem(
       BuildContext context, String name, String route, bool isSelected) {
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
-      onTap: () => Navigator.pushReplacementNamed(context, route),
+      onTap: () {
+        // prevent from navigating to current route
+        if (route == Routes.personal && selectedPage == NavPages.personal ||
+            route == Routes.works && selectedPage == NavPages.work) return;
+        Navigator.pushReplacementNamed(context, route);
+      },
       child: Container(
         decoration: BoxDecoration(
           color: isSelected ? kPrimaryColor : Colors.transparent,
