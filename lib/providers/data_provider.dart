@@ -4,4 +4,5 @@ class DataProvider {
   static const twitter = "https://twitter.com/aminnzo";
   static const dribbble = "https://dribbble.com/aminmohseni";
   static const mail = "dartmolecules@gmail.com";
+  static const resume = "https://enzoboi.xyz/res/file.pdf";
 }
